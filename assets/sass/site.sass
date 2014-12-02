@@ -1,0 +1,1265 @@
+
+
+/*body
+  +b4*/
+
+/*.system-drupal
+  @extend %none*/
+
+#content
+  +page
+
+
+/*@layout*/
+
+.wrapper
+  +page
+  height: 100%
+
+header
+  //  +bg(url("../img/bg_header.png") bottom center)
+  +bg(white)
+  box-shadow: 0px 4px 2px rgba(0,0,0,.5)
+  height: 138px
+  +z(9999)
+  +relative
+
+
+
+body.admin-menu
+  +mt(40px)
+
+// HEADER
+
+.region-header
+  #block-system-main-menu
+    +inline-block
+    > .content > .menu
+      margin: 56px 0 0 40px
+      +fs(0)
+      +relative
+      +block
+      li
+        +inline-block
+        margin: 0 12px
+        a
+          +block
+          +fs(1.8, 100%, 400)
+          +noUnder
+          font-family: $font1
+          color: #484848
+          +transition(.2s)
+          +hover
+            color: black
+            +translateY(1)
+
+  #block-block-1
+    +inline-block
+    h2
+      +none
+    .logo
+      width: 200px
+      height: 105px
+      margin: 20px 0 0 60px
+      +block
+      +bg(url("../img/logotipo.png"))
+
+  #block-block-4
+    +inline-block
+    +right
+    margin: 50px 0 0 0px
+    +br(thin solid $gray)
+    height: 30px
+
+  #block-block-5
+    +inline-block
+    +right
+    margin: 55px 0 0 10px
+    a
+      color: $gray
+      +fs(1.7)
+      +transition(.2s)
+      +hover
+        +co(black)
+        +mt(1px)
+
+  .block-connector
+    +inline-block
+    +right
+    margin: 45px 60px 0 10px
+    .connector-button
+      +size(40px)
+      +inline-block
+      +bg(none)
+      +noBorder
+      +ti(-9999)
+      +pointer
+    .connector-button-wrapper
+      +bg(url("../img/icon_twitter.png"))
+      +pointer
+      +size(40px)
+      +inline-block
+      +nth2
+        +ml(10px)
+        +bg(url("../img/icon_facebook.png"))
+
+
+  #block-system-user-menu
+    +inline-block
+    +right
+    margin: 40px 0 0 10px
+    > .content > ul > li
+      +inline-block
+      > a
+        color: $gray
+        +fs(1.2)
+        +size(40px)
+        +block
+
+
+
+.front
+  .region-content
+    #block-views-biblioteca-block
+      width: 50%
+      +left
+      +bg(#EBCE20)
+
+#block-block-2
+  width: 1280px
+  height: 60px
+  +bg(url("../img/bg_contents.png"))
+  +ti(-9999)
+  h2, p
+    +none
+
+.front .view-contenidos,
+.node-type-contenido .view-contenidos
+  position: relative
+  +block
+  margin: 15px 0
+  +bt(thin solid #ccc)
+  +before
+    +content('')
+    +bb(thin solid #ccc)
+    +w100
+    +top-left(343px,0)
+  > .view-content
+    width: 1166px
+    +centered
+    +fs(0)
+    > .views-row
+      +mb(15px)
+      width: 25%
+      height: 344px
+      +inline-block
+      +fs(1.6)
+      border-left: thin solid #ccc
+      padding: 20px
+
+      .views-field-field-pictures
+        height: 158px
+        img
+          +s100
+      .views-field-title
+        margin: 10px 0
+        a
+          text-decoration: none
+          +co(#383838)
+          +fs(2.2, 100%, 400)
+      .views-field-changed
+        +co(#ebce20)
+        +fs(1.2, 120%, 700)
+      .views-field-body
+        +co(#5c5c5c)
+        +fs(1.2, 130%, 400)
+        +mt(5px)
+        .views-more-link
+          +none
+    > .views-row-last
+      border-right: thin solid #ccc
+
+  .pager .pager-next
+    +ml(10px)
+    +mt(-.5px)
+    +inline-block
+    a
+      +size(15px)
+      +block
+      +bg(url("../img/icon_arrow_next.png") center center $nr)
+      +ti(9999)
+
+  .pager .pager-previous
+    +mr(10px)
+    +mt(-.5px)
+    +inline-block
+    a
+      +size(15px)
+      +block
+      +bg(url("../img/icon_arrow_prev.png") center center $nr)
+      +ti(9999)
+
+  .pager-last,
+  .pager-first
+    display: none $i
+
+
+  .pager-item
+    +radius(100%)
+    +bg(#E69E00)
+    +ti(-9999)
+    display: inline-block $i
+    width: 15px
+    height: 15px
+    padding: 0 $i
+    margin: 0 1px $i
+
+  .pager-current
+    +ti(-9999)
+    +bg(#484848)
+    display: inline-block $i
+    +radius(100%)
+    width: 15px
+    height: 15px
+    padding: 0 $i
+    margin: 0 1px $i
+
+#block-block-3
+  width: 1280px
+  height: 97px
+  +bg(#F2F2F2 url("../img/bg_contact.png"))
+  +ti(-9999)
+
+footer
+  +bg(white)
+  +bt(1px solid black)
+  height: 60px
+  .wrapper
+    +tCenter
+
+
+  +pt(20px)
+  p
+    +co(#313131)
+    +fs(1.3, 100%, 400)
+
+
+.front #block-views-biblioteca-block h2
+  +bt(2px solid #484848)
+  +bb(2px solid #484848)
+  +br(2px solid #484848)
+  +bg(url("../img/icon_libraries.png") top right $nr)
+  height: 69px
+  width: 70%
+  margin: 15px 0
+  +radius-custom(0px, 6px, 6px, 0px)
+  font-family: $font2
+  +fs(3.3, 67px)
+  +co(#484848)
+  +ti(3.5)
+
+.front .view-biblioteca
+  padding: 20px 40px
+  height: 441px
+  +relative
+  .views-row
+    +mb(15px)
+    height: 110px
+    +bb(2px solid #DFC110)
+    .views-field-field-image
+      +left
+      +size(88px)
+      +mr(20px)
+    .views-field-title a
+      +co(#aa7800)
+      +fs(1.4, 100%, 700)
+      +noUnder
+    .views-field-body
+      +mt(10px)
+      p
+        +co(#484848)
+        +fs(1.3, 120%, 400)
+      .views-more-link
+        +none
+    .views-field-field-link a
+      +co(#484848)
+      +fs(1.3, 120%, 400)
+  .view-footer
+    width: 90px
+    +ml(-45px)
+    padding: 10px 0
+    +radius-custom(2px, 2px, 0, 0)
+    +bot-left(50%, 0%)
+    +bg(white)
+    +tCenter
+    +transition(.2s)
+    +hover
+      padding: 12px 0
+    a
+      +co(#313131)
+      +fs(1.6, 100%, 700)
+      +noUnder
+
+
+.banner
+  +z(99)
+  +relative
+  +mt(0px)
+  +block
+  +mb(15px)
+  .wrapper
+    .region-banner
+      width: 100%
+      .view-noticias-home
+        +bg(url("../img/bg_banner.png") top center)
+        width: 100%
+        height: 466px
+        +relative
+        .views-slideshow-cycle-main-frame,
+        .views_slideshow_cycle_slide
+          width: 100% $i
+        .views-slideshow-cycle-main-frame-row-item
+          +relative
+        .views-field-field-image
+          width: 1280px
+          height: 466px
+          img
+            +w100
+        .views-field-title
+          +top-right(75px, 100px)
+          width: 380px
+          +co(#007a49)
+          +fs(4, 100%, 700)
+          +before
+            +content('')
+            +bg(url("../img/icon_banner.png"))
+            +size(93px 107px)
+            +block
+            +mt(-10px)
+        .views-field-body
+          width: 380px
+          +co(#484848)
+          +top-right(270px, 100px)
+          +fs(2, 110%, 400)
+          padding: 0 0 60px
+          height: 170px
+          .views-more-link
+            +size(143px 43px)
+            +co(#484848)
+            +fs(1.8, 43px, 700)
+            +block
+            padding: 0 10px
+            +bot-right(0,0)
+            +noUnder
+            +bg(#EBCE20 url("../img/icon_arrow_down.png") 110px center $nr)
+            +radius(3px)
+            +transition(.2s)
+            +hover
+              +bg(#047D4B url("../img/icon_arrow_down-white.png") 110px center $nr)
+              +co(white)
+
+        .views-slideshow-controls-text-previous
+          +z(9999)
+          +top-left(50%, 20px)
+          +mt(-20px)
+          a
+            +size(40px)
+            +ti()
+            +block
+            +bg (url("../img/icon_prev.png") center center $nr)
+        .views-slideshow-controls-text-next
+          +z(9999)
+          +top-right(50%, 20px)
+          +mt(-20px)
+          a
+            +size(40px)
+            +ti()
+            +block
+            +bg (url("../img/icon_next.png") center center $nr)
+        .views-slideshow-controls-text-pause
+          +none
+
+.front #block-views-foros-block
+  +bg(#09814E)
+  width: 50%
+  +right
+
+.front .view-foros
+  padding: 115px 40px 20px
+  height: 540px
+  +relative
+  .views-row
+    +mb(15px)
+    height: 110px
+    +bb(2px solid #62990B)
+    .views-field-field-image
+      +left
+      +size(88px)
+      +mr(20px)
+    .views-field-php
+      +co(#fff)
+      +fs(1.2, 100%, 700)
+      +mb(2px)
+      +tRight
+    .views-field-comment-count
+      +co(#EBCE20)
+      +fs(1.2, 100%, 300)
+      +mt(5px)
+    .views-field-title a
+      +co(#EBCE20)
+      +fs(1.4, 100%, 700)
+      +noUnder
+    .views-field-body
+      +mt(10px)
+      p
+        +co(#fff)
+        +fs(1.3, 120%, 400)
+      .views-more-link
+        +none
+    .views-field-field-link a
+      +co(#484848)
+      +fs(1.3, 120%, 400)
+  .view-footer
+    width: 90px
+    +ml(-45px)
+    padding: 10px 0
+    +radius-custom(2px, 2px, 0, 0)
+    +bot-left(50%, 0%)
+    +bg(white)
+    +tCenter
+    +transition(.2s)
+    +hover
+      padding: 12px 0
+    a
+      +co(#09814E)
+      +fs(1.6, 100%, 700)
+      +noUnder
+
+
+
+
+
+
+.page-forums .view-temas-de-foros
+  padding: 30px 40px
+
+  .view-content
+    +box
+    +space($start)
+    .views-row
+      +align
+      +transition(.2s)
+      margin: 0 10px 20px
+      +size(278px 230px)
+      +radius(5px)
+      +tCenter
+      +relative
+      box-shadow: 4px 4px 5px rgba(0, 0, 0, .5)
+      .views-field-php-2 a
+        +block
+        +transition(.2s)
+        +radius(5px)
+        +ti()
+        +size(278px 230px)
+        +bg($green url("../img/ico_forums.png") center 15px $nr)
+        +pointer
+        +transition(.2s)
+        +hover
+          +bg($yellow url("../img/ico_forums.png") center 15px $nr)
+
+      .views-field-name
+        padding:  0 10px
+        +top-left(115px,0)
+        +w100
+        +transition(.2s)
+        pointer-events: none
+        a
+          +co(white)
+          +noUnder
+          +transition(.2s)
+          +upper
+          +fs(1.6, 100%, 700)
+      .views-field-description
+        padding:  0 10px
+        +top-left(135px,0)
+        pointer-events: none
+        +transition(.2s)
+        +w100
+        +co(white)
+        +fs(1.4, 100%, 700)
+      .views-field-php
+        +top-left(175px, 0)
+        pointer-events: none
+        +w100
+        +transition(.2s)
+        +fs(1.4, 100%, 700)
+        +co(#EBCD1F)
+      .views-field-php-1
+        +top-left(190px, 0)
+        pointer-events: none
+        +w100
+        +transition(.2s)
+        +fs(1.4, 100%, 700)
+        +co(#EBCD1F)
+
+  .views-row:hover .views-field-php
+    +co($gray)
+
+  .views-row:hover .views-field-php-1
+    +co($gray)
+
+  .views-row:hover .views-field-name a
+    +co($gray)
+
+  .views-row:hover .views-field-description
+    +co($gray)
+
+
+//main
+//  height: 100%
+//  min-height: 100%
+//  +m0
+//  +relative
+//  +block
+//  +b1
+//
+//.content-bottom
+//  min-height: 10%
+//  +noScroll
+//  +m0
+//  +relative
+//  +block
+//  +b2
+
+
+
+.page-biblioteca main .view-biblioteca
+  height: 100%
+  min-height: 100%
+
+.page-forum-active .forum-table
+  width: 100%
+  +fs(1.4, 100%, 400)
+  +mt(20px)
+  thead
+    +noBorder
+  th,
+  tr,
+  tbody
+    +noBorder
+  thead th
+    +cero
+    +tCenter
+    +bl(thin solid white)
+    a
+      +bg(#007A49)
+      +w100
+      +cero
+      +co(white)
+      padding: 0 20px
+      +block
+      +noUnder
+      height: 40px
+      +fs(1.8, 40px, 700)
+      img
+        +ml(10px)
+  .views-field-topic-icon
+    +none
+  tbody .views-field
+    +co($gray)
+    padding: 10px
+    +bl(thin solid white)
+    +bb(thin solid white)
+    +bg($yellow)
+    +tCenter
+    a
+      +co(white)
+      +block
+      +noUnder
+      +hover
+        +under
+
+.page-forum-active
+  .feed-icon
+    +right
+    +mb(10px)
+    +b2
+
+.page-biblioteca .view-biblioteca
+  +w100
+  +inline-block
+  +mt(20px)
+  .view-filters
+    +bg($green)
+  .view-content
+    +noFont
+    padding: 30px 30px
+    +bg($yellow)
+    +relative
+    +before
+      +content('')
+      +bl(thin solid white)
+      height: 96%
+      width: 1px
+      +top-left(20px, 50%)
+
+    .views-row
+      +fs(1.4, 100%, 400)
+      width: 48%
+      padding: 10px
+      height: 180px
+      +inline-block
+      +mb(15px)
+      +bb(thin solid $yellow-dark)
+      +even
+        +right
+
+      .views-field-field-image
+        +size(85px)
+        +left
+        +mr(20px)
+        img
+          +s100
+          +radius(4px)
+      .views-field-title
+        +left
+        width: 440px
+        +fs(1.6, 100%, 700)
+        +co($yellow-dark)
+      .views-field-colorbox
+        +left
+        width: 440px
+        +fs(1.6, 100%, 300)
+        +co($yellow-dark)
+        margin: 5px 0
+        a
+          +co($yellow-dark)
+          +under
+      .views-field-body
+        width: 440px
+        +left
+        +fs(1.4, 120%, 400)
+        +co($gray)
+        .views-more-link
+          +fs(1.6, 100%, 300)
+          +co($yellow-dark)
+          +block
+          +tRight
+          margin: 10px 0
+        
+.page-biblioteca .item-list
+  +bg($yellow)
+.page-biblioteca .item-list,
+.page-forums .item-list
+
+  .pager
+    padding: 20px 0 10px
+    .pager-item
+      +radius(100%)
+      +bg($yellow-dark)
+
+      display: inline-block $i
+      width: 15px
+      height: 15px
+      padding: 0 $i
+      margin: 0 1px $i
+      a
+        +block
+        +ti()
+
+    .pager-current
+      +ti(-9999)
+      +bg(#484848)
+      display: inline-block $i
+      +radius(100%)
+      width: 15px
+      height: 15px
+      padding: 0 $i
+      margin: 0 1px $i
+
+    .pager-next
+      +ml(10px)
+      +mt(-.5px)
+      +inline-block
+      a
+        +size(15px)
+        +block
+        +bg(url("../img/icon_arrow_next.png") center center $nr)
+        +ti()
+
+    .pager-previous
+      +mr(10px)
+      +mt(-.5px)
+      +inline-block
+      a
+        +size(15px)
+        +block
+        +bg(url("../img/icon_arrow_prev.png") center center $nr)
+        +ti()
+
+    .pager-last,
+    .pager-first
+      display: none $i
+
+.page-user-register #page-title,
+.page-user-register .title-render
+  +none
+
+.page-user-register #user-register-form
+  width: 460px
+  +bg($gray)
+  padding: 20px
+  +right
+  +mr(60px)
+  .form-item
+    +w100
+    label
+      +fs(1.4, 100%, 400)
+      +co(white)
+      margin: 5px 0
+    input,
+    select
+      +fs(1.4, 30px, 400)
+      +co($gray)
+      height: 30px
+      +radius(4px)
+      +w100
+      padding: 0 10px
+      +noShadow
+      +noBorder
+    .description
+      +fs(1.2, 110%, 300)
+      +white
+      +none
+    .password-strength
+      +none
+  .field-name-field-profile-birthdate
+    #field-profile-birthdate-add-more-wrapper
+
+      fieldset
+        +noBorder
+        .fieldset-legend
+          +fs(1.6, 100%, 400)
+          +co(white)
+          margin: 5px 0
+      .fieldset-wrapper
+        margin: 0 $i
+        padding: 0 $i
+        width: 100% $i
+        .date-no-float
+
+          width: 100% $i
+          margin: 0 $i
+          padding: 0 $i
+          .form-type-date-select
+            .date-padding
+
+              margin: 0 $i
+              padding: 0 $i
+              width: 100% $i
+              +tLeft
+
+              .form-type-select
+
+                width: 31% $i
+                margin: 0 $i
+                padding: 0 $i
+                +inline-block
+                +cero
+                +noFloat
+                +nth2
+                  margin: 0 10px $i
+                select
+                  +fs(1.4, 30px, 400)
+                  +co($gray)
+                  height: 30px
+                  +radius(4px)
+                  +w100
+                  padding: 0 10px
+                  +bg(white)
+                > label
+                  +none
+                > div
+                  .chosen-container
+                    width: 100% $i
+                    margin: 0 $i
+                    padding: 0 $i
+                    .chosen-single
+                      +noBorder
+                      +fs(1.4, 30px, 400)
+                      +co($gray)
+                      height: 30px
+                      +radius(4px)
+                      +w100
+                      padding: 0 10px
+                      +bg(white)
+                      > div b
+                        background-position: 2px 10px
+  .form-actions
+    width: 100%
+    +tRight
+    #edit-submit
+      +size(auto 43px)
+      +co(#484848)
+      +right
+      +noBorder
+      +mt(10px)
+      +fs(1.8, 43px, 700)
+      +block
+      +pointer
+      padding: 0 40px 0 10px
+      +noUnder
+      +bg(#EBCE20 url("../img/icon_arrow_down.png") 96% center $nr)
+      +radius(3px)
+      +transition(.2s)
+      +hover
+        +bg(#047D4B url("../img/icon_arrow_down-white.png") 96% center $nr)
+        +co(white)
+
+.page-user-register main .content
+  +left
+  width: 100%
+  +bg(url("../img/bg_banner.png") top center $nr)
+  background-size: cover
+  +relative
+  +before
+    +content('')
+    +size(750px 468px)
+    +bot-left(0px, -10px)
+    +bg(url("../img/banner1.png") bottom center $nr)
+
+.page-user-register .system .tabs
+  +none
+
+.page-user-register main
+  +mt(-69px)
+
+
+
+
+
+.page-forums .title-render
+  +mt(50px)
+  h1
+    +bg( white url("../img/icon_forums.png") center right $nr)
+
+.page-biblioteca .title-render
+  +mt(50px)
+  h1
+    +bg( white url("../img/icon_libraries.png") center right $nr)
+
+.page-forum-active .title-render
+  +mt(50px)
+  h1
+    +bg( white url("../img/icon_forums.png") center right $nr)
+
+#block-block-3
+  .content
+
+    +left
+    +s100
+    +block
+    p
+
+      +left
+      +nth1
+
+        width: 80%
+      +nth2
+        width: 20%
+      a
+
+        +block
+        +w100
+        +pointer
+
+
+.page-contact #contact-site-form
+  width: 460px
+  +bg($gray)
+  padding: 20px
+  +right
+  +mr(60px)
+  .form-item
+    +w100
+    label
+      +fs(1.4, 100%, 400)
+      +co(white)
+      margin: 5px 0
+    input,
+    select
+      +fs(1.4, 30px, 400)
+      +co($gray)
+      height: 30px
+      +radius(4px)
+      +w100
+      padding: 0 10px
+      +noShadow
+      +noBorder
+    .description
+      +fs(1.2, 110%, 300)
+      +white
+      +none
+    .password-strength
+      +none
+  .field-name-field-profile-birthdate
+    #field-profile-birthdate-add-more-wrapper
+
+      fieldset
+        +noBorder
+        .fieldset-legend
+          +fs(1.6, 100%, 400)
+          +co(white)
+          margin: 5px 0
+      .fieldset-wrapper
+        margin: 0 $i
+        padding: 0 $i
+        width: 100% $i
+        .date-no-float
+
+          width: 100% $i
+          margin: 0 $i
+          padding: 0 $i
+          .form-type-date-select
+            .date-padding
+
+              margin: 0 $i
+              padding: 0 $i
+              width: 100% $i
+              +tLeft
+
+              .form-type-select
+
+                width: 31% $i
+                margin: 0 $i
+                padding: 0 $i
+                +inline-block
+                +cero
+                +noFloat
+                +nth2
+                  margin: 0 10px $i
+                select
+                  +fs(1.4, 30px, 400)
+                  +co($gray)
+                  height: 30px
+                  +radius(4px)
+                  +w100
+                  padding: 0 10px
+                  +bg(white)
+                > label
+                  +none
+                > div
+                  .chosen-container
+                    width: 100% $i
+                    margin: 0 $i
+                    padding: 0 $i
+                    .chosen-single
+                      +noBorder
+                      +fs(1.4, 30px, 400)
+                      +co($gray)
+                      height: 30px
+                      +radius(4px)
+                      +w100
+                      padding: 0 10px
+                      +bg(white)
+                      > div b
+                        background-position: 2px 10px
+  .form-actions
+    width: 100%
+    +tRight
+    #edit-submit
+      +size(auto 43px)
+      +co(#484848)
+      +right
+      +noBorder
+      +mt(10px)
+      +fs(1.8, 43px, 700)
+      +block
+      +pointer
+      padding: 0 40px 0 10px
+      +noUnder
+      +bg(#EBCE20 url("../img/icon_arrow_down.png") 96% center $nr)
+      +radius(3px)
+      +transition(.2s)
+      +hover
+        +bg(#047D4B url("../img/icon_arrow_down-white.png") 96% center $nr)
+        +co(white)
+
+.page-contact main .content
+  +left
+  width: 100%
+  +bg(url("../img/bg_banner.png") top center $nr)
+  background-size: cover
+  +relative
+  +before
+    +content('')
+    +size(750px 468px)
+    +bot-left(0px, -10px)
+    +bg(url("../img/banner1.png") bottom center $nr)
+
+.page-noticias
+  .title-render
+    margin: 20px 0
+  .view-noticias-home
+    .views-row
+      padding: 20px 20px 60px
+      height: auto
+      +tCenter
+      margin: 20px 0
+      +bb(thin solid $gray)
+      .views-field-field-image
+        +centered()
+        width: 80%
+        img
+          +s100
+          +radius(4px)
+      .views-field-title
+        +fs(3, 100%, 700)
+        +co($gray)
+        margin: 20px 0
+      .views-field-body
+        +fs(1.4, 100%, 400)
+        +co($gray)
+        +tLeft
+        .views-more-link
+          +size(auto 43px)
+          +co(#484848)
+          +right
+          +noBorder
+          +fs(1.8, 43px, 700)
+          +block
+          +pointer
+          margin: 0
+          padding: 0 40px 0 10px
+          +noUnder
+          +bg(#EBCE20 url("../img/icon_arrow_down.png") 96% center $nr)
+          +radius(3px)
+          +transition(.2s)
+          +hover
+            +bg(#047D4B url("../img/icon_arrow_down-white.png") 96% center $nr)
+            +co(white)
+
+ 
+
+ 
+.node-type-noticia
+  a[class*="courseinscription"]
+    +size(auto 35px)
+    +co(#484848)
+    +noBorder
+    +fs(1.6, 35px, 700)
+    +block
+    +left
+    +pointer
+    margin: 20px 0
+    padding: 0 40px 0 10px
+    +noUnder
+    +bg(#EBCE20 url("../img/icon_arrow_down.png") 90% center $nr)
+    +radius(3px)
+    +transition(.2s)
+    +hover
+      +bg(#047D4B url("../img/icon_arrow_down-white.png") 90% center $nr)
+      +co(white)
+
+  .links.inline
+    +left
+    margin: 26px 10px 0
+    li
+      +p0
+    span
+      +cero
+      +inline-block
+      +co($green)
+      +fs(1.8)
+
+  .field-label
+    +none
+
+  .field-name-body
+    +fs(1.4, 120%, 400)
+    +co($gray)
+
+.page-contenidos-dinamicos
+  .view-dinamyc-content
+    padding: 20px
+    +bg($green)
+    +left
+    .views-label
+      +none
+    .view-content
+      +noFont
+      .views-row
+        +white
+        +fs(1.4, 100%, 400)
+        min-height: 220px
+        +noScroll
+        +mb(20px)
+        +bb(thin solid white)
+        width: 100%
+        //        +odd
+        //          +bg($green)
+        //        +even
+        //          +bg($yellow)
+
+        .views-field-title
+          +w100
+          +mb(10px)
+          a
+            +fs(2.4, 100%, 700)
+            +co(white)
+            +block
+            +noUnder
+            +hover
+              text-decoration: underline
+
+        .views-field-field-pictures
+          +size(252px 157px)
+          +left
+          +mr(10px)
+          img
+            +s100
+        .views-field-changed
+          width: 960px
+          +left
+          +mb(10px)
+          +fs(1.4, 100%, 300)
+        .views-field-body
+          +fs(1.4, 150%, 400)
+
+.not-front .title-render h1
+  border: 2px solid #484848
+  height: 64px
+  +radius-custom(6px, 6px, 6px, 6px)
+  font-family: $font2
+  +fs(3.3, 64px)
+  +co(#484848)
+  padding: 0 105px 0 35px
+  +centered
+  +wauto
+  +inline-block
+  +relative
+  +bg(white)
+
+.not-front .title-render
+  +tCenter
+  margin: 30px 0 30px
+  +before
+    +w100
+    +content('')
+    +block
+    +top-left(30px,0)
+    +bb(2px dashed $gray)
+    
+.node-type-noticia,
+.node-type-contenido
+  .title-render h1
+    +noBorder
+    height: auto
+    +radius(0px)
+    font-family: $font1
+    +fs(3.4, 100%, 400)
+    +co(#484848)
+    +relative
+    +cero
+    +block
+    +tLeft
+    margin: 20px 0 10px
+
+.node-type-noticia,
+.node-type-contenido
+  .title-render
+    +tCenter
+    +before
+      +w100
+      +content('')
+      +block
+      +top-left(30px,0)
+      +noBorder
+
+.node-type-contenido
+  .node-contenido
+    .submitted
+      +left
+      width: 100%
+      +tRight
+      +fs(1.4, 100%, 300)
+      +mb(10px)
+      +co($gray)
+      a
+        +co($gray)
+        +noUnder
+
+    .field-label
+      +none
+    .field-name-field-pictures
+      +left
+      +mr(10px)
+      +size(252px 157px)
+      img
+        +s100
+        +radius(4px)
+    .field-name-body
+      width: 1018px
+      +left
+      +fs(1.4, 130%, 400)
+      +co($gray)
+    .field-name-field-pdf
+      width: 1018px
+      +right
+      +tRight
+      margin: 10px 0
+
+      a
+        +fs(1.4, 100%, 700)
+        +co($gray)
+        +noUnder
+
+
+    div[id*="favorite-"]
+      margin: 6px 0
+      +left
+      +tRight
+      width: 1040px
+      height: 30px
+      vertical-align: top
+      img
+        +mr(10px)
+        vertical-align: top
+      a
+        +right
+        vertical-align: top
+        +fs(1.4, 25px, 700)
+        +co($gray)
+        +noUnder
+    
+    a[class*="courseinscription"]
+      +size(auto 35px)
+      +co(#484848)
+      +noBorder
+      +fs(1.6, 35px, 700)
+      +block
+      +right
+      +clear
+      +pointer
+      margin: 0px 0
+      padding: 0 40px 0 10px
+      +noUnder
+      +bg(#EBCE20 url("../img/icon_arrow_down.png") 90% center $nr)
+      +radius(3px)
+      +transition(.2s)
+      +hover
+        +bg(#047D4B url("../img/icon_arrow_down-white.png") 90% center $nr)
+        +co(white)
+
+  .links.inline
+    +left
+    margin: 8px 0px 0 20px
+    li
+      +p0
+    span
+      +cero
+      +inline-block
+      +tRight
+      +co($green)
+      +fs(1.8)
+      +right

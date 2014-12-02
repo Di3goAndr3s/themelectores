@@ -1,0 +1,75 @@
+//$Colors
+$primary: #0060aa
+$secundary: #0060aa
+$transparent: rgba(0,0,0,0)
+
+$color1: rgb(23, 44, 60)
+$color2: rgb(230, 179, 61)
+$color3: rgb(217, 104, 49)
+$color4: rgb(153, 80, 82)
+$color5: rgb(39, 72, 98)
+
+//$blue
+$blue: $color1
+
+//$yellow
+$yellow: #ebce20
+$yellow-dark: #AA7701
+
+//Orange
+$orange: $color3
+
+//Red
+$red: $color4
+
+//Green
+$green: #09814e
+
+$green-light: rgb(142, 216, 93)
+
+//$Gray
+$gray: #484848
+$gray-light: $gray + 100
+$gray-dark: $gray - 100
+$gray-font: $gray - 30
+
+//Cake
+$cake: #E3DAD6
+$cake-dark:#BDB0AA
+
+//Purple
+$purple: #597D9D
+
+//Pink
+$pink: #E30046
+
+// Black
+$black: #222
+$black-light: #333
+$black-dark: #000
+
+//WHITE
+$white: #f6f6f6
+
+
+//COLORS MIXINS
+=gray()
+  color: $gray
+
+=white()
+  color: $white
+
+=black
+  color: $black
+
+=bgWhite($opacity:1)
+  background: rgba(255,255,255,$opacity)
+
+=bgBlack($opacity:1)
+  background: rgba(0,0,0,$opacity)
+
+
+
+//Gradient
+=degra
+  +gradient(top,#fff, 10%, #f9f9f9, 80%)
